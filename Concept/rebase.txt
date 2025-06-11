@@ -1,0 +1,11 @@
+if you do some change in online GitHub portal 
+after that if you want to change some file from locally you can't
+
+for that you need to rebase the HEAD first
+
+---> git pull origin <branch name> --rebase
+
+
+then push local change
+
+---> git push origin <branch name>
