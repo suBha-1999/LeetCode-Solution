@@ -21,6 +21,7 @@ class Solution:
             s=RLE(s)
         return s
 
+
 sol = Solution()
 n = 4
 res = sol.countAndSay(n)
