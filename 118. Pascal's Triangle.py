@@ -1,0 +1,23 @@
+from typing import List
+
+class Solution:
+    def generate(self, numRows: int) -> List[List[int]]:
+        ans = []
+
+        for i in range(numRows):
+            ans.append([1] * (i + 1))
+
+        for i in range(2, numRows):
+            for j in range(1, len(ans[i]) - 1):
+                ans[i][j] = ans[i - 1][j - 1] + ans[i - 1][j]
+
+        return ans
+
+
+# --- Example Run ---
+
+if __name__ == "__main__":
+    numRows = 5  # you can change input here
+    sol = Solution()
+    result = sol.generate(numRows)
+    print(result)
